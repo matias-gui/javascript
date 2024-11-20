@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução a DOM</title>
+    <style>
+        body {
+            background-color: rgba(0, 0, 139, 0.625);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+        }
+        h1 {
+            text-align: center;
+        }
+
+
+        
+
+    </style>
+</head>
+<body>
+    <h1>Aprendendo Dom</h1>
+    <p>DOM é um modelo de objeto para documentos</p>
+    <p>Cinco tipos de acesso no Dom</p>
+    <ul>
+        <li>Por Marca</li>
+        <li>Por ID</li>
+        <li>Por Nome</li>
+        <li>Por Classe</li>
+        <li>Por Seletor</li>
+    </ul>
+
+    <script>
+        
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write(p1.innerHTML)
+    
+        
+        var titulo = window.document.getElementsByTagName('h1')[0]
+        titulo.style.backgroundColor = 'white'
+
+
+
+    </script>
+    
+</body>
+</html>
