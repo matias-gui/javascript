@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Dom</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px ;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            background-color: rgb(95, 163, 222);
+        }
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="acao">
+        Interaga....
+    </div>
+
+    <script>
+        var a = window.document.getElementById('acao')
+        a.addEventListener ('click', clicar)
+        a.addEventListener ('mouseenter', entrar)
+        a.addEventListener ('mouseout', sair)
+        function clicar() {
+            a.innerText = 'Clicou'
+            a.style.backgroundColor = 'white'
+            a.style.color = 'black'
+        }
+        function entrar() {
+            a.innerText = 'Entrou..'
+        }
+        function sair() {
+            a.innerText = 'Saiu..'
+            a.style.backgroundColor = 'black'
+            a.style.color = 'white'
+           
+        }
+    </script>
+    
+</body>
+</html>
