@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+
+    <section>
+        <div id="pergunta">
+            <p>
+                <label for="inicio">Inicio :</label>
+                <input type="number" name="nicio" id="inicio" min="0">
+            </p>
+            <p >
+                <label for="ifim">Fim :</label>
+                <input type="number" name="fim" id="ifim" min="0">
+            </p>
+            <p>
+                <label for="ipasso">Passo :</label>
+                <input type="number" name="passo" id="ipasso" min="0" >
+            </p>
+
+            <input type="button" value="Contar" onclick="contar()">
+
+        </div>
+        <div id="contar">
+            
+            <p id="res">
+
+            </p>
+        
+
+        </div>
+
+    </section>
+
+    <footer>
+       <p> &copy; Curso em Video</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
