@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgba(0, 0, 139, 0.692);
+}
+header > h1 {
+    text-align: center;
+    color: white;
+    margin: 20px 0px 20px 0px;
+}
+section {
+    width: 70vw;
+    height: 50vh;
+    background-color: darkgray;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.375);
+}
+div {
+    padding: 10px;
+}
+#imostranum {
+    width: 140px;
+}
+footer {
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1em;
+}
