@@ -3,29 +3,42 @@ let n = window.document.getElementById('inum')
 let res = document.getElementById('res')
 let m = document.getElementById('most')
 let valores = []
-    
+function numeros(n){
+    if(Number(n) >= 1 && Number(n) < 100) {
+        return true
+    }else{
+        return false
+    }
+}
+
+function lista(n,l){
+    if(l.indexOf(Number(n)) != -1){
+        return true
+
+    }else{
+        return false
+    }
+}
 
 function adicionar (){
-  
-if (n.value.length == 0 || Number ( n.value > 100)){
-    window.alert ('Número invalido, porfavor preencha corretamente')
+    if(numeros(n.value) && !lista(n.value, valores) ){
+        let num = Number(n.value)
+        valores.push(num)
+        let op = document.createElement ('option')
+        op.innerHTML = (`O valor ${num} foi adicionado.`)
+        res.appendChild(op)
+        m.innerHTML=''
+        m.style.backgroundColor =''
+        m.style.boxShadow = ''
 
-}else {
-    let n1 = Number(n.value)
-    valores.push(n1)
-    let tem = valores.indexOf()
-    
-    if(tem == -1 ){
-    let op = document.createElement ('option')
-    op.innerHTML += (`Valor ${n1} foi adicionado.<br>`)
-    res.appendChild (op)}else{
-        alert('n')
+
+    }else{
+        alert('Número invalido ou já se encontra na lista!!')
     }
-   
-}
-   
 }
 
+
+  
 
 
 function finalizar (){
@@ -33,17 +46,22 @@ function finalizar (){
         let max = Math.max(...valores)
         let min = Math.min(...valores)
         let soma = 0
-        m.innerHTML = ""
+        
         for (let i = 0; i < valores.length;i++){
             soma+=valores[i]
         }
         let media= soma / valores.length
+        m.style.backgroundColor = ' rgba(0, 0, 139, 0.5)'
+        m.style.width = '68vw'
+        m.style.margin = 'auto'
+        m.style.boxShadow = '5px 5px 10px  rgba(0, 0, 0, 0.381)'
+        
      
         m.innerHTML +=`Ao todo, temos <strong>${valores.length}</strong> números cadastrado. <br>
         O maior número digitado foi o <strong>${max}</strong><br>
         O menor número digitado foi o <strong>${min}</strong><br>
         Somando todos os números, temos <strong>${soma}</strong><br>
-        A media dos números cadastrado é <strong>${media}</strong>`
+        A media dos números cadastrado é <strong>${media.toFixed(2)}</strong>`
         
         
 }
