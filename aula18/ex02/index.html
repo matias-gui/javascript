@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sálario</title>
+</head>
+<body>
+    <header>
+        <h1>Sálario</h1>
+    </header>
+    <main>
+        <div>
+            <p>
+                <label for="inome">Nome do vendedor:</label>
+                <input type="text" name="nome" id="inome" maxlength="35" autocomplete="name" required >
+            
+            </p>
+            <p>
+                <label for="imatricula">Matricula:</label>
+                <input type="number" name="matricula" id="imatricula" min="0" required  placeholder="Ex: 000000-00">
+            </p>
+            <p>
+                <label for="isalario">Sálario fixo:</label>
+                <input type="number" name="salario" id="isalario" min="0" required placeholder="Ex: R$2000">
+            </p>
+            <p>
+                <label for="ivendas">Total de Vendas:</label>
+                <input type="number" name="vendas" id="ivendas" min="0" required placeholder="Ex: R$1000">
+            </p>
+            <p>
+                <input type="button" value="Enviar" onclick="enviar()">
+            </p>
+            
+        </div>
+        <div id="res">
+
+        </div>
+    </main>
+    <script src="script.js"></script>
+    
+</body>
+</html>
