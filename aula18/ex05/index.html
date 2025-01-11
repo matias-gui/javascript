@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso ideal de acordo com tabela médica</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Peso 
+        </h1>
+    </header>
+    <main>
+        <div>
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome">
+            </p>
+            <p>
+                <label for="ialtura">Altura:
+                </label>
+                <input type="number" name="altura" id="ialtura">
+            </p>
+            <p>
+                <label for="isexo">Sexo:</label>
+                <input type="radio" name="sexo" id="imasc"> Masculino
+                <input type="radio" name="sexo" id="ifem" > Feminino
+            </p>
+            <p>
+                <input type="button" value="Concluir" onclick="concluir()">
+            </p>
+        </div>
+        <div id="res">
+
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
