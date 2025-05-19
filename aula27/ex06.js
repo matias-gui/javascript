@@ -1,4 +1,4 @@
-
+// Classe ContaBancaria com método sacar.
 
 class ContaBancaria {
     #saldo 
@@ -10,11 +10,11 @@ class ContaBancaria {
         if(this.#saldo < saque){
             console.log( 'ERRO, saldo insuficiente')
         }else{
-            let saldoDisponivel = this.#saldo - saque
-            console.log(`O seu saque foi um sucesso.\n Saldo disponivel ${saldoDisponivel.toLocaleString("BRL", {style:"currency", currency:"BRL"})}`)
+            this.#saldo -= saque
+            console.log(`O seu saque foi um sucesso.\n Saldo disponivel ${this.#saldo.toLocaleString("BRL", {style:"currency", currency:"BRL"})}`)
         }
     }
 
 }
 const saque1 = new ContaBancaria()
-saque1.sacar(6000)
+saque1.sacar(4000)
