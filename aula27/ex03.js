@@ -13,7 +13,7 @@ class Estudante {
         return "Não há notas"
       }
       let soma = this.notas.reduce((total, nota) =>  total + nota, 0)
-      // Calculando a méqia, usando a soma divididade por a quantidade de elemento que há no array, usando o length
+      // Calculando a média, usando a soma divididade por a quantidade de elemento que há no array, usando o length
       let media = soma / this.notas.length
       console.log(`A média do Estudante é: ${media.toFixed(2)}`)
     }
